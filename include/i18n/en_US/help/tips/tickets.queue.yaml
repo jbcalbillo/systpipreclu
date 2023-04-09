@@ -1,0 +1,105 @@
+#
+# This is popup help messages for the Staff Panel -> Tickets -> Open
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+search_field:
+    title: Campo de búsqueda
+    content: >
+
+advanced:
+    title: Avanzado
+    content: >
+        Limite sus parámetros de búsqueda. Una vez que haya seleccionado sus criterios de búsqueda avanzada 
+        y ejecute la búsqueda, puede <span class="doc-desc-title">Exportar</span> los datos en la parte inferior de la página.
+
+open_tickets_table:
+    title: Tabla de Tickets abiertos
+    content: >
+        Todos los tickets actualmente abiertos y que requieren atención
+
+ticket:
+    title: Ticket
+    content: >
+
+date:
+    title: Fecha
+    content: >
+
+subject:
+    title: Asunto
+    content: >
+
+from:
+    title: De
+    content: >
+
+priority:
+    title: Prioridad
+    content: >
+
+assigned_to:
+    title: Asignado a
+    content: >
+
+export:
+    title: Exportar
+    content: >
+        Exporte sus datos actualmente a la vista en un archivo CSV. Los archivos CSV se pueden abrir con 
+        cualquier software de hoja de cálculo (es decir, Microsoft Excel, Apple Pages, OpenOffice, etc.).
+
+advanced_search_dialog:
+    title: Búsqueda Avanzada
+    content: >
+
+
+adv_keyword:
+    title: Búsqueda por palabra clave
+    content: >
+        Encuentre vistas según el asunto y el cuerpo del mensaje del hilo del ticket, así como todo el contenido 
+        textual asociado con los campos personalizados para los usuarios y los tickets.
+
+adv_date_range:
+    title: Buscar por rango de fechas
+    content: >
+        Definición aquí
+
+merge_types:
+    title: Tipos de Fusión
+    content: >
+        <b>Combinar temas:</b>
+          Los hilos de todos los Tickets se mostrarán cronológicamente.</br>
+        <b>Temas separados:</b>
+          Los hilos de los Tickets se mostrarán un Ticket a la vez.
+
+child_status:
+    title: Estado del ticket secundario
+    content: >
+        Todos los tickets secundarios se establecerán en un estado cerrado ya que todas las entradas del hilo se moverán al Ticket principal.
+
+parent_status:
+    title: Estado del ticket principal
+    content: >
+        Si elige establecer un Estado principal, el Ticket principal se cambiará al estado que seleccione. 
+        El Ticket en la parte superior de la lista será el Ticket principal.
+
+reply_types:
+    title: Tipos de respuesta
+    content: >
+        <b>Responder a todos:</b>
+          Esta respuesta se envía al Usuario y a los Colaboradores que elija incluir.</br>
+        <b>Responder al usuario:</b>
+          Esta respuesta se envía únicamente al Usuario, no a los Colaboradores.</br>
+        <b>No responder por correo electrónico:</b>
+          No se envían alertas por correo electrónico; sin embargo, la respuesta del agente es visible para 
+          <b>TODOS</b> los usuarios al ver el ticket.

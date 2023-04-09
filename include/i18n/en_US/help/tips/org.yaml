@@ -1,0 +1,35 @@
+#
+# This is the view / management page for an organization in the user
+# directory
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+org_sharing:
+    title: Compartir Tickets
+    content: >
+        <p>
+        El uso compartido de boletos de la organización permite que los miembros 
+        accedan a los boletos que pertenecen a otros miembros de la organización.
+        </p>
+        <p class="info-banner">
+        <i class="icon-info-sign"></i>
+        Los colaboradores siempre tienen acceso a los tickets.
+        </p>
+
+email_domain:
+    title: Dominio de correo electrónico
+    content: >
+        Los usuarios se pueden agregar automáticamente a esta organización en función de su(s) dominio(s) de correo electrónico. 
+        Use el cuadro a continuación para ingresar uno o más dominios separados por comas. Por ejemplo, ingrese <code>it-strategy.mx</code> 
+        para usuarios con direcciones de correo electrónico que terminan en @it-strategy.mx
+

@@ -1,0 +1,74 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> Users
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+# General Settings
+client_name_format:
+    title: Formato de nombre de usuario
+    content: >
+        Elija un formato para los nombres de los usuarios en todo el sistema. Las plantillas de correo 
+        electrónico lo usarán para los nombres si no se especifica ningún otro formato.
+
+client_password_policy:
+    title: Política de gestión de contraseñas
+    content: >
+        Elija una <span class="doc-desc-title">Política de contraseña</span> para <span class="doc-desc-title">Usuarios</span>. 
+        <br><br> Se pueden agregar políticas adicionales instalando complementos <span class="doc-desc-title">Política de contraseña</span>.
+
+client_session_timeout:
+    title: Tiempo de espera de sesión de usuario
+    content: >
+        Elija el tiempo de inactividad máximo (en minutos) antes de que un usuario deba iniciar sesión nuevamente. 
+        <br><br> Si desea deshabilitar los <span class="doc-desc-title">tiempos de espera de sesión de usuario,</span> 
+        ingrese 0.
+
+registration_method:
+    title: Opciones de registro
+    content: >
+        <span class="doc-desc-title">Método de registro</span> y <span
+        class="doc-desc-title">Registro requerido</span> se usan juntos para configurar cómo los usuarios se registran y acceden al portal web 
+        del Sistema de Tickets. La siguiente tabla resume cómo el sistema interpreta las dos configuraciones.
+        <table border="1" cellpadding="2px" cellspacing="0" style="margin-top:7px"
+            ><tbody style="vertical-align:top;">
+            <tr><th>Registro requerido</th>
+                <th>Método de registro</th>
+                <th>Resultado</th></tr>
+            <tr><td>No</td><td>Public</td>
+                <td>Se recomienda el registro, pero no es obligatorio, para tickets nuevos.</td></tr>
+            <tr><td>Si</td><td>Publico</td>
+                <td>Se requiere registro e inicio de sesión para Tickets nuevos</td></tr>
+            <tr><td>No</td><td>Privado</td>
+                <td>Cualquiera puede crear un ticket, pero solo los agentes pueden registrar cuentas</td></tr>
+            <tr><td>Si</td><td>Privado</td>
+                <td>El acceso de los usuarios es solo por invitación</td></tr>
+            <tr><td>No</td><td>Deshabilitado</td>
+                <td>Nadie puede registrarse para obtener una cuenta, pero cualquiera 
+                puede crear un ticket. <em>Así funcionaba osTicket</em></td></tr>
+            <tr><td>Si</td><td>Deshabilitado</td>
+                <td>Deshabilitar nuevos Tickets a través del portal web</td></tr>
+        </tbody></table>
+
+client_verify_email:
+    title: Requerir verificación de correo electrónico
+    content: >
+        Deshabilite esta opción para dar a sus usuarios acceso inmediato a los tickets a través de la página de inicio de sesión 
+        "Verificar estado del ticket" en el portal del cliente. Si está habilitado (que es el valor predeterminado), los usuarios 
+        deberán recibir un correo electrónico y seguir un enlace en el correo electrónico para ver el ticket. 
+        <br><br> La desactivación de la verificación por correo electrónico puede permitir que terceros (por ejemplo, 
+        colaboradores del ticket) se hagan pasar por el propietario del ticket.
+
+allow_auth_tokens:
+    title: Habilitar tokens de autenticación
+    content: >
+        Habilite esta opción para permitir el uso de tokens de autenticación para que los usuarios inicien sesión automáticamente al hacer clic en el enlace del ticket.

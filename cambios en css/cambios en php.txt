@@ -1,0 +1,20 @@
+C:\xampp\htdocs\systpipreee\include\client\templates\sidebar.tmpl.php
+Eliminar acceso a consulta de Tickets
+16	<a href="view.php" style="display:block" class="green button"><?php
+                echo __('Check Ticket Status');?></a>
+
+C:\xampp\htdocs\systpipreee\include\class.nav.php
+352             } else {
+353                $navs['status']=array('desc'=>__('Check Ticket Status'),'href'=>'view.php','title'=>'');
+354            }
+
+eliminar código 352 al 354
+dejar espacio para no mostrar texto y cambiar ruta a index.php
+352             } else {
+353                $navs['status']=array('desc'=>__(' '),'href'=>'index.php','title'=>'');
+354            }
+
+C:\xampp\htdocs\systpipreee\include\client\open.inc.php
+
+36	<b><?php echo __("¿Dudas de cómo levantar un ticket?"); ?></b> <br>
+    <a href="https://drive.google.com/file/d/1vbB8RYIiSnsrpratEsYw7gu_Mcudi6SY/view?usp=share_link" target="_blank"><?php echo __('Checa este manual'); ?></a>

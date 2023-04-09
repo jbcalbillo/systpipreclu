@@ -1,0 +1,23 @@
+#
+# registration-staff.yaml
+#
+# Initial (optional) email sent to staff members when accounts are created
+# for them in the staff control panel
+#
+---
+notes: >
+    Esta plantilla define el correo electrónico inicial (opcional) que se envía a los agentes cuando se crea una 
+    cuenta en su nombre.
+name: "Bienvenido al Sistema de Tickets PIP"
+body: >
+    <h3><strong>HOLA %{recipient.name.first},</strong></h3>
+    <div>
+    Hemos creado una cuenta para ti en nuestro Sistema de Tickets PIP %{url}.<br />
+    <br />
+    Siga el enlace a continuación para confirmar su cuenta y obtener acceso a sus 
+    tickets.<br />
+    <br />
+    <a href="%{link}">%{link}</a><br />
+    <br />
+    <em style="font-size: small">Soporte PIP<br /></em>
+    </div>

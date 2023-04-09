@@ -1,0 +1,26 @@
+#
+# Canned response templates
+#
+---
+- isenabled: 1
+  title: ¿Qué es SYSTPIP (muestra)?
+  response: |
+    SYSTPIP es un sistema de tickets de soporte de código abierto ampliamente utilizado (osTicket), una alternativa 
+    atractiva a los sistemas de soporte al cliente complejos y de mayor costo: simple, liviano, confiable, de 
+    código abierto, basado en la web y fácil de configurar y usar.
+  notes: |
+
+  attachments:
+    - name: osTicket.txt
+      type: text/plain
+      data: Canned Attachments Rock!
+
+- isenabled: 1
+  title: Muestra (con variables)
+  response: |
+    Hola %{ticket.name.first},
+    <br>
+    <br>
+    Tu ticket #%{ticket.number} creadoe el día %{ticket.create_date} está asignado al
+    departamento de %{ticket.dept.name}.
+  notes: |

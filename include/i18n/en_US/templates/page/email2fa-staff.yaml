@@ -1,0 +1,22 @@
+#
+# email2fa-staff.yaml
+#
+# Template of the email sent to staff members when using the Email
+# Two Factor Authentication
+---
+notes: >
+    Esta plantilla define el correo electrónico enviado al Staff que usa el correo electrónico para 
+    la autenticación de dos factores
+name: "Autenticación de dos factores"
+body: >
+    <h3><strong>Hola %{staff.name.first},</strong></h3>
+    <div>
+    Acaba de iniciar sesión en el Sistema de Tickets en %{url}.<br />
+    <br />
+    Use el código de verificación a continuación para terminar de iniciar sesión en el Sistema de Tickets.<br />
+    <br />
+    %{otp}<br />
+    <br />
+    <em style="font-size: small">Soporte PIP</em>
+    <br />
+    </div>

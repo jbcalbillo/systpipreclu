@@ -1,0 +1,22 @@
+#
+# registration-thanks.yaml
+#
+# Page shown to the user after successfully registring and confirming their
+# account. This page should inform the user that the process is complete and
+# that the user can now submit a ticket or access existing tickets
+#
+---
+notes: >
+    Esta plantilla define el contenido que se muestra después de que los Clientes se registren con éxito al 
+    confirmar su cuenta. Esta página debe informar al usuario que el registro está completo y que el Cliente 
+    ahora puede enviar un ticket o acceder a los tickets existentes.
+name: "¡Cuenta confirmada!"
+body: >
+    <div>
+    <strong>Gracias por registrarse.</strong><br />
+    <br />
+    Has confirmado tu dirección de correo electrónico y activado correctamente tu cuenta. 
+    Puede proceder a abrir un nuevo ticket o administrar los existentes.<br />
+    <br />
+    <em>Soporte PIP</em><br />
+    </div>

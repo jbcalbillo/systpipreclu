@@ -1,0 +1,19 @@
+#
+# Page template: offline.yaml
+#
+# The offline page is served to the customer portal when the help desk is
+# configured offline in the Admin Panel
+#
+---
+notes: |
+    La página Fuera de línea aparece en el Portal del cliente cuando el Sistema de Tickets PIP está fuera de línea.
+
+name: Fuera de línea
+body: |
+    <div><h1>
+    <span style="font-size: medium">Sistema de Tickets PIP Fuera de línea</span>
+    </h1>
+    <p>Gracias por su interés en contactarnos.</p>
+    <p>Nuestro servicio de asistencia está fuera de línea en este momento, vuelva a consultar 
+    más tarde.</p>
+    </div>

@@ -1,0 +1,149 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> Tickets
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+number_format:
+    title: Formato de número de Ticket
+    content: >
+        Esta configuración se utiliza para generar números de ticket. Use signos hash (`#`) donde se colocarán los dígitos. 
+        Cualquier otro texto en el formato de número se conservará. Los temas de ayuda pueden definir formatos de números 
+        personalizados.
+        <br/><br/>
+        Por ejemplo, para números de seis dígitos use <code>######</code>.
+
+sequence_id:
+    title: Secuencia de número de Ticket
+    content: >
+        Elija una secuencia a partir de la cual derivar nuevos números de ticket. El sistema tiene una secuencia 
+        incremental y una secuencia aleatoria por defecto. Puede crear tantas secuencias como desee. Use varias 
+        secuencias en la configuración del formato de número de ticket para los temas de ayuda.
+
+queue_bucket_counts:
+    title: Recuentos de tickets de nivel superior
+    content: >
+        Esta configuración se utiliza para ocultar o mostrar los recuentos de tickets en las colas de nivel principal. 
+        Volver a la forma en que solían ser las cosas.
+default_ticket_status:
+    title: Estado predeterminado para nuevos tickets
+    content: >
+        Elija un estado como predeterminado para los nuevos tickets. Esto se puede definir para cada tema de ayuda, 
+        si se desea. También se puede anular mediante un filtro de ticket.
+    links:
+      - title: Administrar estados de tickets
+        href: /scp/lists.php?type=ticket-status
+
+default_sla:
+    title: SLA predeterminado
+    content: >
+        Elija el acuerdo de nivel de servicio predeterminado para administrar cuánto tiempo puede permanecer abierto 
+        un ticket antes de que se vuelva vencido.
+    links:
+      - title: Crear más planes SLA
+        href: /scp/slas.php
+
+default_ticket_queue:
+    title: Cola de tickets predeterminada
+    content: >
+        Configuración para determinar la cola predeterminada para los agentes al iniciar sesión. Los agentes también pueden 
+        configurar su cola predeterminada en su pestaña Perfil para anular esta configuración.
+
+default_priority:
+    title: Prioridad predeterminada
+    content: >
+        Elija una <span class="doc-desc-title">prioridad</span> predeterminada para los tickets a los que no se les asigna una prioridad 
+        automáticamente. <br/><br/> La prioridad se puede asignar mediante el tema de ayuda, el departamento enrutado o la 
+        configuración del filtro de tickets.
+
+maximum_open_tickets:
+    title: Número máximo de tickets abiertos
+    content: >
+        Ingrese el <em>número</em> máximo de tickets que un Usuario puede tener <strong>abiertos</strong> en su Sistema de Tickets.
+        <br><br> Ingrese <span class="doc-desc-opt" >0 </span> si prefiere deshabilitar esta limitación.
+
+email_ticket_priority:
+    title: Prioridad de ticket por correo electrónico
+    content: >
+        Usar la prioridad de correo electrónico asignada por el servicio de correo del destinatario
+
+show_related_tickets:
+    title: Mostrar tickets relacionados
+    content: >
+        Mostrar todos los tickets relacionados en el inicio de sesión del usuario; de lo contrario, el acceso está 
+        restringido a una vista de ticket por inicio de sesión
+
+human_verification:
+    title: Verificación humana
+    content: >
+        Habilite CAPTCHA en el Portal del cliente para verificar que un ticket entrante sea el resultado 
+        de una actividad humana.
+        <br><br>
+        Requiere la lilbrería GDLib
+
+claim_tickets:
+    title: Reclamar tickets en respuesta
+    content: >
+        Habilite esto para asignar automáticamente boletos no asignados al agente que responde.
+        <br><br>
+        Los tickets reabiertos siempre se asignan al último encuestado, a menos que la asignación 
+        automática al reabrir esté deshabilitada en el nivel de departamento.
+
+auto_refer:
+    title: Tickets de referencia automática al cerrar
+    content: >
+        Habilite esto para referir automáticamente los tickets al Agente asignado o de 
+        cierre cuando se cierra un ticket.
+        <br><br>
+        Esto es necesario cuando desea dar a los agentes con acceso limitado acceso continuo a los 
+        tickets asignados después de que estén cerrados.
+
+collaborator_ticket_visibility:
+    title: Visibilidad de tickets de colaboradores
+    content: >
+        Si está habilitado, los usuarios tendrán visibilidad de TODOS los boletos en los que participen al iniciar 
+        sesión en el portal web.
+        <br><br>
+        Si está deshabilitado, los usuarios solo podrán ver sus propios boletos cuando inicien sesión en 
+        el portal web.
+
+require_topic_to_close:
+    title: Requerir tema de ayuda para cerrar
+    content: >
+        Si está habilitado, un ticket debe tener un tema de ayuda para que un agente lo cierre.
+
+allow_external_images:
+    title: Permitir imágenes externas
+    content: >
+        Si está habilitado, el sistema permitirá imágenes en línea externas que tengan una extensión de imagen válida 
+        (.png, .jpg, .jpeg, .gif). Si está deshabilitado, el sistema excluirá cualquier imagen en línea externa. 
+        Una advertencia a tener en cuenta es que si la configuración está deshabilitada, aún almacenaremos imágenes en 
+        línea externas que tengan una extensión de imagen válida en caso de que la configuración se vuelva a habilitar 
+        en el futuro.
+
+assigned_tickets:
+    title: Tickets asignados
+    content: >
+        Habilite esta función para excluir los boletos asignados de la <span class="doc-desc-title">cola de tickets abiertos</span>.
+
+answered_tickets:
+    title: Tickets contestados
+    content: >
+        Habilite esta función para mostrar los tickets respondidos en la <span class="doc-desc-title">Cola de tickets respondidos</span>. 
+        De lo contrario, se incluirá en los <span class="doc-desc-title">Tickets abiertos
+
+ticket_attachment_settings:
+    title: Archivos adjuntos de subprocesos de entradas
+    content: >
+        Configure los ajustes para los archivos adjuntos al campo Detalles del problema. Esta configuración se utiliza 
+        para todos los tickets y mensajes nuevos, independientemente del canal de origen 
+        (portal web, correo electrónico, API, etc.).

@@ -1,0 +1,99 @@
+#
+# This is popup help messages for the Staff Panel -> Dashboard -> My Profile
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+contact_information:
+    title: Información del contacto
+    content: >
+
+username:
+    title: Username
+    content: >
+        Solo aquellos Agentes con estatus de Admin pueden cambiar un nombre de usuario. Si es un agente con privilegios 
+        de administrador, puede lograr esto seleccionando un agente para editar de la tabla 
+        <span class="doc-desc-title">Miembros del personal</span>.
+    links:
+      - title: Cambiar un nombre de usuario como Administrador
+        href: /scp/staff.php
+
+config2fa:
+    title: Autenticación de dos factores
+    content: >
+        La autenticación de dos factores agrega una capa adicional de seguridad al 
+        iniciar sesión en el servicio de asistencia. Una vez que envíe correctamente 
+        su nombre de usuario y contraseña, deberá ingresar un token para terminar de 
+        iniciar sesión en el Sistema de Tickets PIP.
+
+time_zone:
+    title: Zona horaria
+    content: >
+
+daylight_saving:
+    title: Horario de verano
+    content: >
+
+maximum_page_size:
+    title: Tamaño máximo de página
+    content: >
+
+auto_refresh_rate:
+    title: Tasa de actualización automática
+    content: >
+
+default_signature:
+    title: Firma predeterminada
+    content: >
+
+default_paper_size:
+    title: Tamaño de papel predeterminado
+    content: >
+
+show_assigned_tickets:
+    title: Mostrar Tickets asignados
+    content: >
+        <p>
+        Habilitar esta opción anulará la configuración global para ocultar los 
+        Tickets asignados de las colas abiertas.
+        </p>
+        <p class="info-banner">
+        <i class="icon-info-sign"></i>
+        Esta configuración solo está disponible cuando los tickets asignados se excluyen globalmente.
+        </p>
+
+password:
+    title: Contraseña
+    content: >
+
+current_password:
+    title: Contraseña actual
+    content: >
+
+new_password:
+    title: Nueva contraseña
+    content: >
+
+confirm_new_password:
+    title: Confirme nueva contraseña
+    content: >
+
+signature:
+    title: Firma
+    content: >
+        Cree una <span class="doc-desc-title">Firma</span> opcional que tal vez aparezca al final de sus Respuestas 
+        de tickets. Si esta <span class="doc-desc-title">Firma</span> aparece o no, depende de la 
+        <span class="doc-desc-title">Plantilla de correo electrónico</span> que se usará en una 
+        respuesta de ticket.
+    links:
+      - title: Crear plantillas de correos electrónicos en el panel de administración
+        href: /scp/templates.php

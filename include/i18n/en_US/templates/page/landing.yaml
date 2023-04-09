@@ -1,0 +1,22 @@
+#
+# Page template: landing.yaml
+#
+# The landing page is served on the front page of the customer portal above
+# the two links for creating new tickets and viewing ticket status.
+#
+---
+notes: >
+    La Landing Page se refiere al contenido de la vista inicial del Portal del Cliente. 
+    La plantilla modifica el contenido que se ve arriba de los dos enlaces 
+    <strong>Abrir un nuevo ticket</strong> y <strong>Verificar el estado del ticket</strong>.
+
+name: Landing
+body: >
+    <h1>Bienvenido al Sistema de Tickets PIP</h1>
+    <p>
+    Para agilizar las solicitudes de soporte y brindarle un mejor servicio, utilizamos un sistema de tickets de 
+    soporte. A cada solicitud de soporte se le asigna un número de ticket único que puede usar para rastrear 
+    el progreso y las respuestas en línea. Para su referencia, proporcionamos archivos e historial completos 
+    de todas sus solicitudes de soporte. Se requiere una dirección de correo electrónico válida para enviar 
+    un Ticket.
+    </p>

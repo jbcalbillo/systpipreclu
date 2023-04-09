@@ -1,0 +1,224 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> System
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+helpdesk_status:
+    title: Estatus del Sistems de Tickets PIP
+    content: >
+        Si el estatus cambia <span
+        class="doc-desc-opt">Offline</span>, la interfaz del cliente se desactivará. 
+        Solo personal PIP podrá acceder al sistema.
+
+helpdesk_url:
+    title: URL del Sistema de Tickets PIP
+    content: >
+        Esta URL es la base de su instalación del Sistema de Tickets PIP. Se utiliza en la 
+        comunicación por correo electrónico para dirigir a los usuarios finales a su 
+        página principal.
+
+helpdesk_name_title:
+    title: Nombre de su Sistema de Tickets
+    content: >
+        Este es el título que aparece en la pestaña del navegador. Si su página de soporte 
+        técnico está en favoritos, será el título/nombre de la página del sitio.
+
+default_department:
+    title: Departamento por Default
+    content: >
+        Elije a un <span class="doc-desc-title">Departmento</span> default
+        para que los tickets sean asignados a este de manera automática.
+        <br/><br/>
+        El ticket se puede enrutar según el tema de ayuda, el correo electrónico entrante y 
+        la configuración del filtro de tickets.
+
+default_schedule:
+    title: Horario predeterminado
+    content: >
+        Elija el horario predeterminado que utilizará el SLA al procesar los tickets vencidos.
+    links:
+      - title: Administrar Horarios
+        href: /scp/schedules.php
+
+force_https:
+    title: Force HTTPS
+    content: >
+        Esta configuración permite a los administradores configurar si quieren o no forzar 
+        HTTPS en todo el sistema. Si está habilitado, cualquier solicitud que utilice el protocolo 
+        HTTP se redirigirá al protocolo HTTPS. Tenga en cuenta que esto solo funcionará si tiene 
+        un certificado SSL instalado y HTTPS configurado en el servidor.
+        <br/><br/>
+        <b>Nota:</b><rb/>
+        Esto podría afectar los scripts de piping remotos. Haga referencia a los nuevos scripts incluidos en
+        <code>setup/scripts/</code> para actualizaciones.
+
+default_page_size:
+    title: Tamaño de página predeterminado
+    content: >
+        Elija la cantidad de elementos que se muestran por página en las colas de tickets en el 
+        Panel de personal PÍP. Cada Agente también puede personalizar este número para su propia 
+        cuenta en <span class="doc-desc-title">Mis Preferencias</span>.
+
+default_log_level:
+    title: Nivel de registro predeterminado
+    content: >
+        Determinar el nivel mínimo de emisiones que se registrarán en el
+        el registro del sistema <span class="doc-desc-title">Debug</span> representa la menor 
+        gravedad y <span class="doc-desc-title">Error</span> representa la mayor gravedad. 
+        Por ejemplo, si desea ver todos los problemas en los registros del sistema, 
+        elija Depurar.
+
+purge_logs:
+    title: Purgar Logs
+    content: >
+        Determine cuánto tiempo le gustaría conservar los<span
+        class="doc-desc-title">Registros del sistema</span> antes de que se eliminen.
+
+enable_richtext:
+    title: Habilitar texto enriquecido
+    content: >
+        Si está habilitado, esto permitirá el uso de formato de texto enriquecido 
+        entre Clientes y Agentes.
+
+enable_avatars:
+    title: Habilitar avatares en la vista de hilos
+    content: >
+        Habilite esto para mostrar <span class="doc-desc-title">Avatares</span> en la correspondencia
+        del hilo. <br><br> La <span class="doc-desc-title">fuente de avatar</span> se puede configurar en las páginas 
+        de configuración de los agentes y los usuarios.
+    links:
+      - title: Configuración de agentes PIP
+        href: /scp/settings.php?t=agents
+
+      - title: Configuración de usuarios
+        href: /scp/settings.php?t=users
+
+collision_avoidance:
+    title: Prevención de colisiones de agentes
+    content: >
+        Ingrese el tiempo máximo que se le permite a un agente mantener un bloqueo en un ticket
+        o tarea sin ninguna actividad.
+        <br><br>
+        Ingrese <span class="doc-desc-opt">0</span> para desactivar la función de bloqueo.
+
+allow_iframes:
+    title: Permitir iFrame del sistema
+    content: >
+        Ingrese una lista separada por comas de direcciones URL/dominios para que se encuadre el sistema. Si se deja en blanco, 
+        el sistema se establecerá de forma predeterminada en 'auto'. esto acepta comodines de 
+        dominio, esquema de URL HTTP/HTTPS y números de puerto.
+        <br><br>
+        <b>Ejemplo:</b>
+        <br>
+        https://domain.tld, sub.domain.tld:443, http://*.domain.tld
+    links:
+      - title: Syntax Information (host-source)
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#Sources"
+
+acl:
+    title: ACL (Lista de control de acceso)
+    content: >
+        Introduzca una lista de direcciones IP separadas por comas para permitir el acceso al sistema.
+        Hay cuatro opciones para elegir a qué panel(es) aplicar la ACL.
+        <table border="1" cellpadding="2px" cellspacing="0" style="margin-top:7px"
+            ><tbody style="vertical-align:top;">
+            <tr><th>Aplicar a</th>
+                <th>Descripción</th></tr>
+            <tr><td>Deshabilitado</td>
+                <td>Deshabilita ACL por completo.</td></tr>
+            <tr><td>Todo</td>
+                <td>Aplica ACL a todos los paneles. (es decir, Portal del cliente, Panel de personal, 
+                Panel de administración)</td></tr>
+            <tr><td>Portal del Cliente</td>
+                <td>Aplica ACL solo al Portal del Cliente.</td></tr>
+            <tr><td>Panel de personal</td>
+                <td>Aplica ACL solo al panel de personal y al panel de administración.</td></tr>
+        </tbody></table>
+
+embedded_domain_whitelist:
+    title: Lista blanca de dominios integrados
+    content: >
+        Ingrese una lista separada por comas de los dominios que se incluirán en la lista blanca para los 
+        iFrames utilizados en el sistema. No ingrese <code>http(s)</code> o <code>www</code> con el dominio; 
+        sólo se aceptará el nombre de dominio. Esto se usa cuando desea incrustar contenido en el sistema 
+        (por ejemplo, un video de YouTube) a través del Portal del cliente, la base de conocimientos, etc. 
+        Si agrega un iFrame con un dominio que no está en la lista blanca, el sistema eliminará el iFrame 
+        automáticamente. De forma predeterminada, el sistema permite YouTube, Vimeo, DailyMotion y Microsoft Stream. 
+        <br><br> <b>Ejemplo:</b> <br> dominio.tld, sub.dominio.tld
+
+# Date and time options
+date_time_options:
+    title: Date &amp; Time Options
+    content: >
+        La siguiente configuración define la configuración predeterminada para Fecha y amp; Ajustes de tiempo 
+        para la mesa de ayuda. Puede optar por utilizar los valores predeterminados de configuración regional 
+        para la configuración regional seleccionada o personalizar los formatos para cumplir con sus requisitos
+        únicos. Consulte las cadenas de formato de ICU como referencia para la personalización. Las fechas 
+        que se muestran a continuación simplemente ilustran el resultado de sus valores correspondientes.
+    links:
+      - title: Consulte la tabla de formato de fecha de la UCI
+        href: http://userguide.icu-project.org/formatparse/datetime
+
+languages:
+    title: Idiomas del sistema
+    content: >
+        Elija un idioma principal del sistema y, opcionalmente, idiomas secundarios para que su interfaz 
+        se sienta localizada para sus agentes y usuarios finales.
+
+primary_language:
+    title: Idioma principal del sistema
+    content: >
+        El contenido de este idioma se muestra a los agentes y usuarios finales si su preferencia de idioma 
+        respectivo no está disponible actualmente. Esto incluye el contenido de la interfaz, así como contenido 
+        personalizado, como páginas de agradecimiento y mensajes de correo electrónico. <br/><br/> 
+        Este es el idioma en el que se deben escribir las versiones no traducidas de su contenido.
+
+secondary_language:
+    title: Idiomas secundarios
+    content: >
+        Seleccione las opciones de preferencia de idioma para sus agentes y usuarios finales. La interfaz estará 
+        disponible en estos idiomas y el contenido personalizado, como las páginas de agradecimiento y los nombres 
+        de los temas de ayuda, se podrá traducir a estos idiomas.
+
+# Attachments
+attachments:
+    title: Configuración y almacenamiento de archivos adjuntos
+    content: >
+        Configure cómo se almacenan los archivos adjuntos.
+
+default_storage_bk:
+    title: Servidor de almacenamiento de archivos
+    content: >
+        Elija cómo se almacenan los archivos adjuntos.
+        <br><br>
+        Se pueden agregar backends de almacenamiento adicionales instalando complementos de almacenamiento.
+
+max_file_size:
+    title: Tamaño máximo de archivo
+    content: >
+        Elija un tamaño de archivo máximo para los archivos adjuntos que cargan los agentes. Esto incluye archivos 
+        adjuntos enlatados, artículos de la base de conocimientos y archivos adjuntos a tickets y respuestas a 
+        tareas. El límite superior está controlado por la configuración 
+        <code>upload_max_filesize</code> de PHP.
+    links:
+      - title: PHP ini settings
+        href: "http://php.net/manual/en/ini.core.php#ini.upload-max-filesize"
+
+files_req_auth:
+    title: Requerir inicio de sesión
+    content: >
+        Habilite esta configuración para prohibir la entrega de archivos adjuntos a usuarios no autenticados. Es decir, 
+        los usuarios deben iniciar sesión en el sistema (tanto usuarios finales como agentes), para ver los archivos adjuntos. 
+        <br><br> Desde el punto de vista de la seguridad, tenga en cuenta que el navegador del usuario puede conservar archivos 
+        vistos anteriormente en su caché. Además, todos los enlaces de archivos en su mesa de ayuda caducan automáticamente después 
+        de aproximadamente 24 horas.

@@ -1,0 +1,14 @@
+C:\xampp\htdocs\systpipreee\include\client\login.inc.php
+
+Quitar acceso a portal Admin
+
+57 <div>
+58    <b><?php echo __("I'm an agent"); ?></b> —
+59    <a href="<?php echo ROOT_PATH; ?>scp/"><?php echo __('sign in here'); ?></a>
+60    </div>
+
+Cambio
+<div>
+    <b><?php echo __(" "); ?></b> 
+    <a href="<?php echo ROOT_PATH; ?>scp/"><?php echo __(' '); ?></a>
+    </div>

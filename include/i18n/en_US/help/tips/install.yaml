@@ -1,0 +1,95 @@
+#
+# Help popup items for the installer
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+helpdesk_name:
+    title: Nombre del Helpdesk
+    content: |
+        <p>El nombre de su sistema de soporte, por ejemplo, Soporte de [Nombre de la empresa]</p>
+
+system_email:
+    title: Correo electrónico predeterminado del sistema
+    content: |
+        <p>Dirección de correo electrónico predeterminada, p. ej. juan.barrios@it-strategy.mx - puede agregar
+         más tarde!</p>
+
+default_lang:
+    title: Idioma predeterminado del sistema
+    content: |
+        <p>Los datos iniciales para este idioma se instalarán en la
+         base de datos. Por ejemplo, se instalarán plantillas de correo electrónico y páginas 
+         predeterminadas del sistema para este idioma.</p>
+    links:
+      - title: Paquetes de idiomas de SYSTPIP
+        href: https://drive.google.com/drive/folders/1VYai42kJB2eT9RubD1VSaiJ1QbnY-98X?usp=share_link
+
+first_name:
+    title: Nombre
+    content: |
+        <p>Nombre del administrador</p>
+
+last_name:
+    title: Apellido
+    content: |
+        <p>Apellido del administrador</p>
+
+email:
+    title: Dirección de correo electrónico
+    content: |
+        <p>Dirección de correo electrónico personal del administrador. Debe ser diferente del correo 
+        electrónico predeterminado del sistema.</p>
+
+username:
+    title: Username
+    content: |
+        <p>Nombre de inicio de sesión del administrador. Debe tener al menos tres (3) caracteres.</p>
+
+password:
+    title: Contraseña
+    content: |
+        <p>Contraseña del administrador. Debe tener seis (6) caracteres o más.</p>
+
+password2:
+    title: Confirmar Contraseña
+    content: |
+        <p>Vuelva a escribir la contraseña de administrador. Debe coincidir.</p>
+
+db_prefix:
+    title: Prefijo de tabla MySQL
+    content: |
+        <p>SYSTPIP requiere un prefijo de tabla para evitar posibles conflictos de tabla en 
+        una base de datos compartida.</p>
+
+db_host:
+    title: MySQL Hostname
+    content: |
+        <p>
+        La mayoría de los hosts usan 'localhost' para el nombre de host de la base de datos local. 
+        Consulte con su anfitrión si localhost falla..
+        </p>
+        <p>
+        Se asume el puerto predeterminado establecido en php.ini. Se puede especificar un 
+        número de puerto no estándar como <code>hostname:port</code>
+        </p>
+
+db_schema:
+    title: MySQL Database
+    content: |
+        <p>Nombre de la base de datos que utilizará SYSTPIP.</p>
+
+db_user:
+    title: MySQL Username
+    content: |
+        <p>El usuario de MySQL debe tener todos los derechos sobre la base de datos.</p>
+
+db_password:
+    title: MySQL Password
+    content: |
+        <p>Contraseña de MySQL asociada con el usuario anterior.</p>

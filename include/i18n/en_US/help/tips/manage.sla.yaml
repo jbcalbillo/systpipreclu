@@ -1,0 +1,46 @@
+#
+# This is popup help messages for the Admin Panel -> Manage -> SLA Plan
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+name:
+    title: Nombre
+    content: >
+        Elija un nombre descriptivo para este <span class="doc-desc-title">Plan SLA</span> 
+        que refleje su propósito.
+
+grace_period:
+    title: Periodo de gracia
+    content: >
+        Determinar el número de horas después de que se crea un ticket sea marcado automáticamente como 
+        vencido. <br><br> Las horas se cuentan durante el horario especificado. La jerarquía es Horario del 
+        departamento, Horario de SLA, luego Horario predeterminado del sistema. Si no se configura un Horario,
+        las Horas se cuentan las 24 horas del día, los 7 días de la semana (incluso después del horario comercial) 
+        hasta que el Ticket vence.
+
+transient:
+    title: Transitorio
+    content: >
+        Los SLA transitorios se consideran temporales y pueden ser anulados por
+        un SLA no transitorio en la transferencia de <span class="doc-desc-opt">Departamento</span> 
+        o cuando se cambia su <span class="doc-desc-title">Tema de ayuda</span>.
+
+schedule:
+    title: Calendario
+    content: >
+        Elija el Calendario que utilizará este SLA al generar tickets Vencidos.
+        <br><br>Tenga en cuenta que la configuración del Departamento puede anular 
+        este cronograma.      
+    links:
+      - title: Administrar calendarios
+        href: /scp/schedules.php

@@ -1,0 +1,51 @@
+#
+# Email template: assigned.alert.yaml
+#
+# Sent to staff members when a ticket is assigned to them. Tickets can be
+# assigned automatically by the system or manually by another staff member.
+# Use %{assigner} to distinguish who made the assignment.
+#
+---
+notes: |
+    Enviado a los miembros del Staff cuando se les asigna un ticket. Los tickets pueden ser asignados 
+    automáticamente por el sistema o manualmente por otro miembro del personal.
+    Use %{assigner} para distinguir quién hizo la asignación.
+subject: |
+    Ticket Asignado a ti
+body: |
+    <h3><strong>Hola %{assignee.name.first},</strong></h3>
+    El Ticket <a href="%{ticket.staff_link}">#%{ticket.number}</a> has sido asignado a ti por %{assigner.name.short}
+    <br>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+        <td>
+             <strong>De</strong>:
+        </td>
+        <td>
+             %{ticket.name} &lt;%{ticket.email}&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <strong>Asunto</strong>:
+        </td>
+        <td>
+             %{ticket.subject}
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    %{comments}
+    <br>
+    <br>
+    <hr>
+    <div>Para ver/responder al ticket, por favor, <a
+    href="%{ticket.staff_link}"><span style="color: rgb(84, 141, 212);"
+    >inicie sesión</span></a> en el Sistema de Tickets PIP</div>
+    <em style="font-size: small; ">Soporte PIP</em>
+    <br>
+    <img src="https://drive.google.com/file/d/1kWfzFfFZlENtpaV__fb9egAkLdXpHeh5/view?usp=sharing"
+    alt="Powered by PIP-Reclu" width="126" height="19" style="width: 126px;">

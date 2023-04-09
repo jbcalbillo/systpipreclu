@@ -1,0 +1,35 @@
+#
+# Email template: ticket.autoreply.yaml
+#
+# Sent to a user when an automatic canned response is posted to a ticket
+# when it is created
+#
+---
+notes: |
+    Se envía a un usuario cuando se publica una respuesta estándar automática en un ticket cuando se crea.
+
+    Variables disponibles para reemplazo: %{ticket.*}, %{response}
+
+subject: |
+    Re: %{ticket.subject} [#%{ticket.number}]
+body: |
+    <h3><strong>Estimad(a) %{recipient.name.first},</strong></h3>
+    Se ha creado una solicitud de soporte y se le ha asignado un ticket 
+    <a href="%{recipient.ticket_link}">#%{ticket.number}</a> con la siguiente respuesta automática
+    <br>
+    <br>
+    Tema: <strong>%{ticket.topic.name}</strong>
+    <br>
+    Asunto: <strong>%{ticket.subject}</strong>
+    <br>
+    <br>
+    %{response}
+    <br>
+    <br>
+    <div style="color: rgb(127, 127, 127);"><br>
+    %{signature}</div>
+    <hr>
+    <div style="color: rgb(127, 127, 127); font-size: small;"><em>Esperamos que esta respuesta haya respondido suficientemente a sus preguntas. 
+    Si desea proporcionar comentarios o información adicional, responda a este correo electrónico o <a href="%{recipient.ticket_link}">
+    <span style="color: rgb(84, 141, 212);" >inicie sesión en su cuenta</span></a> para obtener un archivo completo de sus 
+    solicitudes de soporte.</em></div>

@@ -1,0 +1,89 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> System page
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+orm_title:
+    title: Título del formulario
+    content: >
+        Este texto de título se muestra en un cuadro gris encima de los campos del formulario
+
+form_instructions:
+    title: Instrucciones de formulario
+    content: >
+        Puede agregar instrucciones adicionales que ayudarán a guiar al usuario en el contexto 
+        de los campos del formulario y posiblemente resaltar los datos requeridos.
+
+field_sort:
+    title: Posición de visualización del campo
+    content: >
+        Haga clic en el ícono de la flecha hacia arriba y hacia abajo y arrastre la fila del campo para ordenar
+        dentro de este formulario. La preferencia de clasificación no surte efecto hasta que se guarda el 
+        formulario.
+
+field_label:
+    title: Etiqueta del campo
+    content: >
+        Esta etiqueta se muestra como solicitud para este campo. Por lo general, un campo de respuesta corta se mostraría como esta:<br> 
+        <strong>Etiqueta:</strong>&nbsp; <tipo de entrada="texto">
+
+field_type:
+    title: Tipo de campo
+    content: >
+        Esto se utiliza para definir el tipo de entrada que se espera del usuario. Puede seleccionar entre respuesta 
+        corta y larga, número de teléfono, fecha y hora, casilla de verificación, lista desplegable o una selección de lista 
+        personalizada.
+    links:
+      - title: Listas personalizadas
+        href: /scp/lists.php
+
+field_visibility:
+    title: Visibilidad del campo
+    content: >
+        Elija una opción de visibilidad y requisitos para este campo. <table border="1" cellpadding="2px" cellpacing="0" style="margin-top:7px">
+        <tbody style="vertical-align:top;">
+        <tr><th>Configuración</th >
+        <th>Resultado</th></tr><tr>
+        <td>Opcional</td>
+        <td>Los agentes y los usuarios finales pueden ver el campo, pero ninguno de los dos está obligado a responder.</td>
+        </tr> <tr><td>Obligatorio</td>
+        <td>Los agentes y los usuarios finales pueden ver el campo, y ambos deben responder</td></tr><tr>
+        <td>Obligatorio para los usuarios finales</td>
+        <td>Los agentes y los usuarios finales pueden ver el campo, solo los usuarios finales deben responder</td></tr>
+        <tr>
+        <td>Obligatorio para los agentes</td>
+        <td>Los agentes y los usuarios finales pueden ver el campo, solo los agentes deben responder</td></tr><tr>
+        <td>Interno, opcional</td>
+        <td>Solo los agentes pueden ver el campo, pero no se requiere respuesta.</td></tr>< tr>
+        <td>Interno, obligatorio</td>
+        <td>Solo los agentes pueden ver el campo y se requiere una respuesta.</td></tr><tr>
+        <td>Solo para usuarios finales</td>
+        <td>Solo los usuarios finales pueden ver el campo y se requiere una respuesta.</td></tr></tbody></table>
+
+field_variable:
+    title: Automatización de campo
+    content: >
+        Los datos del campo estarán disponibles para las plantillas de página y correo electrónico a través del nombre 
+        utilizado en esta columna. Por ejemplo, los campos en el formulario de ticket común están disponibles a 
+        través de <code>%{ticket.variable}</code>, donde <strong>variable</strong> es el nombre utilizado en 
+        esta columna.<br><br>< em>La información de la empresa está disponible a través de 
+        <code>%{</code><code>company.variable}</code> y la información del usuario está disponible a través de 
+        <code>%{ticket.user.variable}</code></ em>
+
+field_delete:
+    title: Eliminar este campo
+    content: >
+        Verifique y guarde el formulario para eliminar un campo de este formulario.<br> <br>
+        <em>Eliminar un campo no elimina los datos ingresados previamente para el campo en los formularios completados. 
+        Por ejemplo, si un ticket enviado anteriormente tiene datos para un campo, eliminar el campo de este 
+        formulario no eliminará los datos del ticket.</em>

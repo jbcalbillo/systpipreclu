@@ -1,0 +1,121 @@
+#
+# This is popup help messages for the Admin Panel -> Staff -> Add Staff Form
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+username:
+    title: Username
+    content: >
+        Elija un nombre de usuario para el agente que sea único para su Sistema de Tickets.
+reset2fa:
+    title: Restablecer autenticación de dos factores
+    content: >
+        En caso de que un agente pierda la capacidad de iniciar sesión en el Sistema de Tickets con su 
+        configuración 2FA actual, un administrador puede restablecer la configuración 2FA del agente 
+        para que pueda volver a configurarla en su próximo inicio de sesión exitoso.
+
+email_address:
+    title: Dirección de correo electrónico
+    content: >
+        Ingrese el correo electrónico del agente que recibirá <span class="doc-desc-title">Alertas &amp; Notificaciones</span> 
+        del <span class="doc-desc-title">Sistema de Tickets</span>.<br><br> 
+        El personal puede iniciar sesión en el panel de control del personal con nombre de usuario o dirección de correo electrónico.
+
+welcome_email:
+    title: Correo electrónico de bienvenida
+    content: >
+        Envíe al nuevo Agente un enlace de acceso a la cuenta desde el cual el Agente podrá establecer su propia 
+        contraseña. Si no está marcado, deberá establecer una contraseña y comunicar la información 
+        de inicio de sesión al nuevo personal.
+
+account_password:
+    title: Contraseña de la cuenta
+    content: >
+        Como <span class="doc-desc-title">administrador</span>, 
+        puede cambiar la contraseña de un Agente.
+forced_password_change:
+    title: Forzar Cambio de contraseña
+    content: >
+        Habilite esto si desea obligar al nuevo agente a cambiar su propia contraseña en el 
+        próximo inicio de sesión.
+
+agents_signature:
+    title: Firma del agente
+    content: >
+        Cree una firma para el Agente pueda seleccionar al responder a un ticket.
+
+account_status:
+    title: Estado de la cuenta
+    content: >
+        Si el estado del agente es <span class="doc-desc-opt">Bloqueado</span>, 
+        no podrá iniciar sesión en la mesa de ayuda.
+
+assigned_group:
+    title: Grupo asignado
+    content: >
+        El <span class="doc-desc-title">Grupo</span> que elija para que pertenezca este Agente 
+        determinará qué permisos tiene el Agente dentro del <span class="doc-desc-title">Sistema de Tickets< /lapso>.
+    links:
+      - title: Administrar Grupos
+        href: /scp/groups.php
+
+primary_department:
+    title: Departamento primario
+    content: >
+        Elija el <span class="doc-desc-title">departamento</span> principal al que pertenece este 
+        agente y una <span class="doc-desc-title">función</span> efectiva.
+
+    links:
+      - title: Administrar Departmentos
+        href: /scp/departments.php
+
+primary_role:
+    title: Rol primario
+    content: >
+        Elija el <span class="doc-desc-title">rol</span> principal al que pertenece este agente.
+
+primary_role_on_assign:
+    title: Usar rol principal para asignaciones
+    content: >
+        Habilite esto para volver a la <span class="doc-desc-title">función principal</span> 
+        cuando a este agente se le asignan tickets y tareas fuera del <span class="doc-desc-title">departamento principal</span> 
+        y <span class="doc-desc-title">acceso extendido</span> departamentos. De lo contrario, 
+        el agente tendrá acceso de solo lectura.
+
+daylight_saving:
+    title: Horario de verano
+    content: >
+        Habilite esta función si desea que el horario de verano entre en juego 
+        automáticamente para la zona horaria de este agente.
+
+limited_access:
+    title: Acceso limitado
+    content: >
+        Si está habilitado, el Agente solo tendrá acceso a los tickets asignados directamente o a través del Equipo.
+
+directory_listing:
+    title: Lista de directorios
+    content: >
+        Habilite esto si desea incluir a este agente en el 
+        <span class="doc-desc-title">Directorio de personal</span>.
+    links:
+      - title: Visite el directorio de personal
+        href: /scp/directory.php
+
+vacation_mode:
+    title: Vacation Mode
+    content: >
+        Si cambia el estado del Agente a <span class="doc-desc-opt">Modo de vacaciones</span>, el Agente 
+        no recibirá <span class="doc-desc-title">Alertas &amp; Notificaciones</span>
+        ni estará disponible para la asignación de entradas.
+

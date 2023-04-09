@@ -1,0 +1,25 @@
+#
+# Page template: thank-you.yaml
+#
+# The thank-you page is served to the customer portal when a user submites a
+# new ticket via the customer portal.
+#
+---
+notes: |
+    Esta plantilla define el contenido que se muestra en la página de agradecimiento 
+    después de que un Cliente envía un nuevo ticket en el Portal del Cliente.
+
+name: Gracias
+body: |
+    <div>%{ticket.name},
+    <br>
+    <br>
+    Gracias por contactarnos.
+    <br>
+    <br>
+    Se ha creado una solicitud de ticket de soporte y un representante se comunicará 
+    con usted en breve si es necesario.</p>
+    <br>
+    <br>
+    Soporte PIP
+    </div>

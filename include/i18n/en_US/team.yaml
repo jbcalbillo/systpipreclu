@@ -1,0 +1,8 @@
+#
+# Initial teams defined for the system.
+#
+---
+- flags: 0x01
+  name: PIP Reclutamiento
+  notes: |
+    Soporte de nivel 1, responsable de la interacción inicial con los clientes

@@ -1,0 +1,60 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> Autoresponder
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+new_ticket:
+    title: Nuevo Ticket
+    content: >
+        Habilite esto si desea que se envíe una respuesta automática al usuario en el nuevo ticket.
+    links:
+      - title: Nueva plantilla de respuesta automática de ticket
+        href: /scp/templates.php?default_for=ticket.autoresp
+
+new_ticket_by_staff:
+    title: Nuevo Ticket por parte del Staff
+    content: >
+        Aviso enviado cuando un Agente crea un ticket en nombre del Usuario. El agente 
+        puede anular esto al crear nuevos tickets.
+    links:
+      - title: Nueva plantilla de aviso de ticket
+        href: /scp/templates.php?default_for=ticket.notice
+
+new_message_for_submitter:
+    title: Confirmación de mensaje nuevo
+    content: >
+        Aviso de confirmación enviado cuando se agrega un nuevo mensaje a un ticket existente.
+    links:
+      - title: Plantilla de confirmación de mensaje nuevo
+        href: /scp/templates.php?default_for=message.autoresp
+
+new_message_for_participants:
+    title: Aviso de mensaje nuevo
+    content: >
+        Transmitir los mensajes recibidos del remitente del mensaje a todos los demás 
+        participantes en el ticket.
+    links:
+      - title: Nueva plantilla de aviso de actividad
+        href: /scp/templates.php?default_for=ticket.activity.notice
+
+overlimit_notice:
+    title: Aviso de exceso
+    content: >
+        Se envía un aviso de rechazo de ticket al usuario sobre la infracción del número 
+        máximo de tickets abiertos.
+    links:
+      - title: Plantilla de aviso de exceso de límite
+        href: /scp/templates.php?default_for=ticket.overlimit
+
+      - title: Esyablecer <em>Máximo de Tickets abiertos</em>
+        href: /scp/settings.php?t=tickets

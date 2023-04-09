@@ -1,0 +1,137 @@
+#
+# This is popup help messages for the Admin Panel -> Staff -> Add New Department -> Department Form
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+status:
+    title: Estado
+    content: >
+         Si está inhabilitado o archivado, este <span class="doc-desc-title">Departamento</span>
+         no estará disponible.
+type:
+    title: Tipo
+    content: >
+        Seleccione <span class="doc-desc-opt">Privado</span> si desea enmascarar asignaciones a este 
+        departamento en el Portal del cliente. Además, cuando se etiqueta como 
+        <span class="doc-desc-opt">Privado</span>, la <span class="doc-desc-title">Firma del departamento</span> 
+        no se mostrará en las respuestas por correo electrónico.<br/><br/>Al menos un departamento debe ser 
+        <span class="doc-desc-opt">Público</span>
+
+email:
+    title: Email
+    content: >
+        Dirección de correo electrónico utilizada cuando las respuestas se envían a los usuarios 
+        cuando los agentes publican respuestas a Tickets.
+
+template:
+    title: Conjunto de plantillas
+    content: >
+        <span class="doc-desc-title">Conjunto de plantillas de correo electrónico</span> utilizado para respuestas automáticas 
+        y alertas &amp; Avisos para tickets enrutados a este Departamento.
+    links:
+      - title: Administrar plantillas
+        href: /scp/templates.php
+
+sla:
+    title: SLA
+    content: >
+        Acuerdo de Nivel de Servicio para boletos enrutados a este Departamento.
+    links:
+      - title: Administrar planes SLA
+        href: /scp/slas.php
+
+schedule:
+    title: Horario
+    content: >
+        Horario utilizado por el SLA al entregar tieckets enrutados a este Departamento,
+        <br><br>
+        Esta configuración tiene prioridad sobre la configuración de la programación del SLA y del sistema.
+    links:
+      - title: Administrar horarios
+        href: /scp/schedules.php
+
+manager:
+    title: Gerente de departamento
+    content: >
+        Seleccione un <span class="doc-desc-title">Gerente</span> para este departamento.<br/><br/> 
+        Los gerentes se pueden configurar para recibir alertas especiales y también tienen derecho 
+        a anular la asignación de tickets.
+    links:
+      - title: Administrar alertas &amp; notificaciones
+        href: /scp/settings.php?t=alerts
+
+group_membership:
+    title: Alertas &amp; Destinatarios de notificaciones
+    content: >
+        Seleccione los destinatarios de las 
+        <span class="doc-desc-title">Alertas &amp; notificaciones</span>.
+    links:
+      - title: Configurar Alertas &amp; notificaciones
+        href: "/scp/settings.php?t=tickets#alerts"
+
+sandboxing:
+    title: Restricciones de asignación de boletos
+    content: >
+        Determine si los Tickets se pueden asignar a todos los agentes, agentes con acceso al Departamento principal 
+        o ampliado, o solo agentes con acceso al Departamento principal.
+
+disable_auto_claim:
+    title: Deshabilitar reclamo automático
+    content: >
+        Márquelo para <strong>deshabilitar</strong> la reclamación automática en 
+        respuesta para este departamento.
+        <br><br>
+        Los agentes aún pueden reclamar manualmente los tickets no asignados
+
+disable_reopen_auto_assign:
+    title: Deshabilitar asignación automática al reabrir
+    content: >
+        Marque esto para <strong>deshabilitar</strong> la asignación automática 
+        de tickets reabiertos para este departamento.
+        <br><br>
+        De lo contrario, el Ticket se asignará automáticamente al último Agente que responda
+
+auto_response_settings:
+    title: Autoresponder Settings
+    content: >
+        Esto le permite anular la configuración global de Autoresponder 
+        para este departamento.
+
+new_ticket:
+    title: Respuesta automática de ticket nuevo
+    content: >
+        Puede deshabilitar la Respuesta automática enviada al Usuario cuando 
+        se crea un nuevo ticket y se enruta a este Departamento.
+
+new_message:
+    title: Respuesta automática de mensaje nuevo
+    content: >
+        Puede deshabilitar la respuesta automática enviada al usuario para confirmar 
+        un mensaje recién publicado para los tickets de este Departamento.
+
+auto_response_email:
+    title: Correo electrónico de respuesta automática
+    content: >
+        Seleccione una dirección de correo electrónico desde la que se envíen respuestas automáticas 
+        para este departamento.
+
+department_access:
+    title: Acceso a Grupos
+    content: >
+        Permitir que los Agentes de otros Departamentos accedan a los tickets de este Departamento.
+
+department_signature:
+    title: Firma del Departamento
+    content: >
+        La firma está disponible como opción, para <span
+        class="doc-desc-opt">Public</span> Departamentos, o Agentes.

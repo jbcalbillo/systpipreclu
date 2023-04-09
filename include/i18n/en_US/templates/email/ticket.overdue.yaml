@@ -1,0 +1,30 @@
+#
+# Email template: ticket.overdue.yaml
+#
+# Sent to staff members when a ticket transitions to overdue in the system.
+# Overdue tickets occur based on the ticket's due-date as well as the SLA
+# defined for the ticket.
+#
+---
+notes: |
+    Enviado a los miembros del personal cuando un ticket pasa a estar vencido en el sistema. 
+    Los tickets vencidos ocurren según la fecha de vencimiento del ticket, así como el 
+    SLA definido para el ticket.
+
+subject: |
+    Alerta de ticket caducado
+body: |
+    <h3><strong>Hola %{recipient.name}</strong>,</h3>
+    El ticket, <a href="%{ticket.staff_link}">#%{ticket.number}</a> está seriamente atrasado.
+    <br>
+    <br>
+    Todos debemos trabajar arduamente para garantizar que todos los tickets se atiendan de manera oportuna.
+    <br>
+    <br>
+    
+    <hr>
+    <div>Para ver o responder al ticket, <a href="%{ticket.staff_link}"><span style="color: rgb(84, 141, 212);">inicie sesión</span></a> 
+    en el Sistema de Tickets PIP. Recibes este aviso porque el ticket se te asigna directamente a ti, a un equipo o departamento del 
+    que eres miembro.</div> 
+
+  

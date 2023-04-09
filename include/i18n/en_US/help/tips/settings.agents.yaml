@@ -1,0 +1,80 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> Agents
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+
+# General Settings
+agent_name_format:
+    title: Formato de nombre de agente
+    content: >
+        Elija un formato para los nombres de los agentes en todo el sistema. Las plantillas de correo electrónico 
+        lo usarán para los nombres si no se especifica ningún otro formato.
+
+staff_identity_masking:
+    title: Enmascaramiento de identidad del Staff
+    content: >
+        Si está habilitado, esto ocultará el nombre del Agente del Cliente durante cualquier comunicación.
+
+disable_agent_collabs:
+    title: Deshabilitar colaboradores de agentes
+    content: >
+        Si está habilitado, los agentes que los usuarios agregan como colaboradores se deshabilitarán automáticamente. 
+        Esto es útil cuando los usuarios agregan agentes a ciegas al campo CC, lo que hace que los agentes reciban 
+        todas las alertas de participantes.
+        <br><br>
+        <strong>Nota:</strong>
+        <br>
+        Esta configuración es global para todos los Tickets creados por el Usuario a través de API, Piping y Fetching.
+
+
+agent_password_policy:
+    title: Política de gestión de contraseñas
+    content: >
+        Elija una <span class="doc-desc-title">Política de contraseña</span> para <span class="doc-desc-title">Agentes</span>.
+        <br><br>
+        Se pueden agregar políticas adicionales instalando los complementos <span class="doc-desc-title">Política de contraseña</span>.
+
+allow_password_resets:
+    title: Permitir restablecimientos de contraseña
+    content: >
+        Habilite esta función si desea mostrar el enlace <span class="doc-desc-title">Olvidé mi contraseña</span> 
+        en la <span class="doc-desc-title">Página de inicio de sesión del personal< /span> después de un intento 
+        fallido de inicio de sesión.
+
+reset_token_expiration:
+    title: Ventana de restablecimiento de contraseña
+    content: >
+        Elija la duración (en minutos) durante la cual los <span class="doc-desc-title"> tokens de restablecimiento de contraseña</span> 
+        serán válidos. Cuando un agente solicita un <span class="doc-desc-title">restablecimiento de contraseña</span>, 
+        se le envía por correo electrónico un token que permitirá que se realice el restablecimiento.
+
+staff_session_timeout:
+    title: Tiempo de espera de la sesión del agente
+    content: >
+        Elija el tiempo de inactividad máximo (en minutos) antes de que un agente deba iniciar sesión nuevamente.<br><br> 
+        Si desea deshabilitar <span class="doc-desc-title">Tiempos de espera de sesión del agente</span> , ingrese 0.
+
+bind_staff_session_to_ip:
+    title: Vincular sesión de agente a IP
+    content: >
+        Habilite esto si desea que el agente sea recordado por su IP actual al iniciar sesión. <br><br> 
+        No se recomienda esta configuración para los usuarios a los que se les asignan 
+        direcciones IP de forma dinámica.
+
+require_agent_2fa:
+     title: Requerir autenticación de dos factores
+     content: >
+         Habilite esta función si desea tener una capa adicional de autenticación configurada para los agentes cuando inician sesión en 
+         el Sistema de Tickets. Una vez que envíen correctamente su nombre de usuario y contraseña, se les pedirá que 
+         envíen un token para terminar de iniciar sesión en el servicio de asistencia.

@@ -1,0 +1,12 @@
+#
+# banner-client.yaml
+#
+# This forms the header on the staff login page. It can be useful to inform
+# your clients about your login and registration policies.
+---
+notes: >
+    Esto compone el encabezado en la página de inicio de sesión del cliente. Puede ser útil para informar a sus 
+    Clientes sobre sus políticas de inicio de sesión y registro.
+name: "Ingresar al sistema de Tickets PIP de %{company.name}"
+body: >
+    Para brindarle un mejor servicio, alentamos a nuestros Clientes a registrarse para obtener acceso a una cuenta.

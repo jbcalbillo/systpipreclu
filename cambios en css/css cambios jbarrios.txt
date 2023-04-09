@@ -1,0 +1,170 @@
+root\assets\default\css\theme.css
+
+index.php
+
+125	a:hover, .link:hover {
+    	border-bottom: 2px solid #1DB9C3;
+    	margin-bottom: 0;
+	cursor: pointer;
+	}
+
+288	.green.button:hover {
+  	background-color: #1DB9C3;
+  	color: #fff;
+	box-shadow: 0px 3px 11px 2px #FF5200;
+	}
+
+
+298	.blue.button:hover {
+  	background-color: #1EAE98;
+  	color: #FFF;
+	ox-shadow: 0px 3px 11px 2px #FF5200;
+	}
+
+
+375 	#nav li a.active,
+	#nav li a:hover {
+  	background-color: #FFF;
+  	color: #000;
+	box-shadow: 10px 9px 16px 1px #1DB9C3;
+	}
+
+
+525	.featured-category i {
+    	color: 1DB9C3;
+    	text-shadow: 1px 1px 1px #1DB9C3;
+    	display: inline-block;
+    	vertical-align: middle;
+	}
+
+398	#nav li a.status {
+	background-image: ;
+	} ELIMINAR PARA BLOQUEAR ACCESSO A ESTADO DE TICKETS
+
+
+
+C:\xampp\htdocs\systpipreee\scp\css\scp.css
+
+
+#msg_notice,
+.success-banner,
+.notice-banner { margin: 0; padding: -1px 10px 0px 28px; margin-bottom: 10px; border: 1px solid #0a0; background: url('../images/icons/ok.png') 10px 50% no-repeat #e0ffe0; }
+
+#msg_warning,
+.warning-banner { margin: 0; padding: -1px 10px 0px 28px; margin-bottom: 10px; border: 1px solid #f26522; background: url('../images/icons/alert.png') 10px 50% no-repeat #ffffdd; }
+
+#msg_error,
+.error-banner { margin: 0; padding: -1px 10px 0px 28px; margin-bottom: 10px; border: 1px solid #a00; background: url('../images/icons/error.png') 10px 50% no-repeat #fff0f0; }
+
+#notice_bar { margin: 0; padding: -1px 10px 0px 28px; height: 16px; line-height: 16px; border: 1px solid #0a0; background: url('../images/icons/ok.png') 10px 50% no-repeat #e0ffe0; }
+
+#warning_bar { margin: 0; padding: -1px 10px 0px 28px; height: 16px; line-height: 16px; border: 1px solid #f26522; background: url('../images/icons/alert.png') 10px 50% no-repeat #ffffdd; }
+
+#error_bar { margin: 0; padding: -1px 10px 0px 28px; height: 16px; line-height: 16px; border: 1px solid #a00; background: url('../images/icons/error.png') 10px 50% no-repeat #fff0f0; }
+
+
+
+
+#nav .active a {
+    color:#007cff;
+    font-weight:bold;
+}
+
+
+#nav a:hover,
+#sub_nav a:hover,
+a:hover i[class^="icon-"],
+.tabs a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+#nav .inactive li a:hover {
+    color:#000;
+    background-color: #fbfbfb;
+    background-color: rgba(193, 83, 83, 0.24);
+
+}
+
+#sub_nav > li > a:hover,
+#customQ_nav .jb-overflowmenu-menu-primary li.item:hover > a {
+    color:#000;
+    text-decoration: none;
+}
+
+
+.customQ-dropdown li:not(.personalQ) > span {
+    color:#f00;
+    font-weight:bold;
+    margin-right:0;
+}
+
+#basic_search {
+  background-color: #fff;
+  margin: -10px 0;
+  margin-bottom: 5px;
+  padding: 8px;
+  box-shadow: inset 0px -5px 11px -7px #007cff;
+  border-bottom: 1px dotted #aaa;
+  border-radius: 0 0 5px 5px;
+}
+
+i.help-tip {
+    vertical-align: inherit;
+    color: #aaa;
+    opacity: 0.8;
+    text-indent: initial;
+    color: blue;
+}
+
+
+table.list thead th a { padding-right: 15px; display: block; white-space: nowrap; color: #f00; background: url('../images/asc_desc.gif') #fff 100% 50% no-repeat; }
+
+table.list thead th a.asc { background: url('../images/asc.gif') 100% 50% no-repeat #cfe6ff; }
+table.list thead th a.desc { background: url('../images/desc.gif') 100% 50% no-repeat #cfe6ff; }
+table.list tbody td {
+    background:#fff;
+    border:1px solid #fff;
+    padding:1px;
+    vertical-align:top;
+}
+
+#footer {
+    clear:both;
+    padding:10px;
+    text-align:center;
+    font-size:0.9em;
+    color: #fff;
+}
+
+a {
+    color:#000;
+}
+
+ul.tabs {
+    padding:4px 0 0 20px;
+    margin:0;
+    text-align:left;
+    height:29px;
+    border-bottom:1px solid #fff;
+    background:#fff;
+    position: relative;
+    box-shadow: inset 0 -5px 10px -9px #f00;
+    color: #000;
+}
+
+.tip_menu li a {
+    display:block;
+    width:auto;
+    float:left;
+    padding:0 10px;
+    border-right:1px solid #f00;
+    color:#00;
+}
+
+.thread-entry.message .header {
+    background:#FFC3C3;
+}
+
+184E81

@@ -1,0 +1,119 @@
+#
+# This is popup help messages for the Admin Panel -> Manage -> Help Topic
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+help_topic_information:
+    title: Información del tema de ayuda
+    content: >
+        <span class="doc-desc-title">Temas de ayuda</span>qué información se recopila de 
+        los usuarios y cómo se enrutan o asignan los tickets.
+topic:
+    title: Nombre del tema
+    content: >
+        Nombre único del tema de ayuda.
+
+htstatus:
+    title: Estatus
+    content: >
+        Si está inhabilitado o archivado, este 
+        <span class="doc-desc-title">Tema de ayuda</span> no estará disponible.
+
+status:
+    title: Estatus del Tickets
+    content: >
+        Seleccione el Estado del ticket asignado a los nuevos tickets relacionados con este 
+        <span class="doc-desc-title">Tema de ayuda</span>. <br><br> Los filtros de ticket pueden 
+        anular el nuevo estado de ticket.
+
+type:
+    title: Tipo
+    content: >
+        Si un <span class="doc-desc-title">Tema de ayuda</span> está etiquetado como Privado, 
+        solo estará disponible para que los Agentes lo elijan cuando un Agente abra un nuevo 
+        Ticket en el Panel de personal.
+
+parent_topic:
+    title: Tema principal
+    content: >
+        Seleccione el Tema principal al que pertenecerá este <span class="doc-desc-title">Tema de ayuda</span>.
+        El tema principal aparecerá primero en la lista con este <span class="doc-desc-title">Tema de ayuda</span> 
+        detrás del principal.
+
+custom_form:
+    title: Formulario personalizado
+    content: >
+        Los formularios personalizados lo ayudarán a obtener información más específica de los usuarios 
+        que sea relevante para este <span class="doc-desc-title">tema de ayuda</span>.
+    links:
+      - title: Administrar formularios personalizados
+        href: /scp/forms.php
+
+priority:
+    title: Prioridad
+    content: >
+        Seleccione la Prioridad asignada a los nuevos tickets relacionados con este <span class="doc-desc-title">Tema de ayuda</span>.
+        <br><br> Los filtros de tickets pueden anular la prioridad de los nuevos tickets.
+
+department:
+    title: Departamento
+    content: >
+        Elija el departamento al que se enrutarán los nuevos tickets bajo este tema de ayuda.
+    links:
+      - title: Administrar departamentos
+        href: /scp/departments.php
+sla_plan:
+    title: Plan SLA
+    content: >
+        Elija el plan SLA asociado con este <span class="doc-desc-title">Tema de ayuda</span>.
+        <br><br>Esta selección anulará el plan SLA de cualquier Departamento seleccionado
+    links:
+      - title: Administrar planes SLA
+        href: /scp/slas.php
+
+thank_you_page:
+    title: Página de agradecimiento
+    content: >
+        Elija la página de agradecimiento a la que se dirige a un usuario después de abrir un ticket 
+        en este <span class="doc-desc-title">Tema de ayuda</span>.
+    links:
+      - title: Administrar paginas de agradecimiento
+        href: /scp/pages.php
+
+auto_assign_to:
+    title: Asignar automáticamente nuevos tickets
+    content: >
+        Opcionalmente, elija un Agente o Equipo para autoasignar los tickets abiertos
+        con este <span class="doc-desc-title">Tema de ayuda</span> 
+        <br><br>Los filtros de tickets pueden anular la asignación.
+    links:
+      - title: Administrar personal y equipos
+        href: /scp/staff.php
+
+ticket_auto_response:
+    title: Respuesta automática de tickets
+    content: >
+        Si está marcada, la configuración deshabilitará las respuestas automáticas de nuevos tickets para este 
+        <span class="doc-desc-title">Tema de ayuda</span>. <br><br> Esto anula la configuración de 
+        respuesta automática para el <span class="doc-desc-title">Departamento</span> 
+        así como la <span class="doc-desc-title">Configuración de respuesta automática</ span>.
+    links:
+      - title: Configuración de respuesta automática
+        href: /scp/settings.php?t=autoresp
+
+custom_numbers:
+    title: Números de ticket personalizados
+    content: >
+        Elija "Personalizado" aquí para anular el formato de numeración de tickets predeterminado del 
+        sistema para los tickets creados en este tema de ayuda. Consulte los consejos de ayuda en la 
+        página Configuración/Tickets para obtener más detalles sobre la configuración.

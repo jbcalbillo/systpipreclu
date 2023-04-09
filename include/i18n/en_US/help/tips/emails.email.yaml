@@ -1,0 +1,170 @@
+#
+# This is popup help messages for the Admin Panel -> Emails -> Add New Email
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+new_ticket_help_topic:
+    title: Nuevo tema de ayuda de ticket
+    content: >
+        Elija un tema de ayuda para que se asocie automáticamente con los tickets 
+        creados a través de esta dirección de correo electrónico.
+        Los formularios asociados con el tema de ayuda se agregarán al ticket, pero no 
+        tendrán ningún dato.
+    links:
+      - title: Administrar temas de ayuda
+        href: /scp/helptopics.php
+
+new_ticket_priority:
+    title: Prioridad de nuevo ticket
+    content: >
+        Elija la <span class="doc-desc-title">prioridad</span> para los nuevos tickets 
+        creados a través de esta dirección de correo electrónico.
+
+new_ticket_department:
+    title: Nuevo departamento de Tickets
+    content: >
+        Elija el <span class="doc-desc-title"> departamento </span> al que se enrutarán los nuevos 
+        tickets creados a través de esta dirección de correo electrónico.
+    links:
+      - title: Administrar Departamentos
+        href: /scp/departments.php
+
+auto_response:
+    title: Respuesta automática de ticket nuevo
+    content: >
+        Puede deshabilitar la respuesta automática enviada al usuario cuando se crea un nuevo ticket 
+        a través de esta dirección de correo electrónico.
+
+userid:
+    title: Username
+    content: >
+        El nombre de usuario se utiliza en el proceso de autenticación de correo electrónico. Aceptamos 
+        cadenas de direcciones únicas, cadenas de buzones compartidos, cadenas de nombre de servidor + 
+        nombre de usuario y una combinación de todos.
+    links:
+      - title: Más información
+        href: https://docs.google.com/document/d/1boYWUNgI_IUOpJcwlmZsF2tq3Vv2s1iY/edit?usp=share_link&ouid=103257422191272452285&rtpof=true&sd=true
+
+username:
+    title: Username
+    content: >
+
+password:
+    title: Password
+    content: >
+
+login_information:
+    title: Información de inicio de sesión de correo electrónico
+    content: >
+        El <span class="doc-desc-title">Nombre de usuario</span> y la <span class="doc-desc-title">Contraseña</span>
+        son necesarios para recuperar el correo electrónico de los buzones de correo IMAP/POP, 
+        así como para enviar correo electrónico a través de SMTP.
+
+mail_account:
+    title: Obtener correo electrónico
+    content: >
+        Obtenga correos electrónicos de un buzón de correo IMAP o POP 
+        remoto y conviértalos en tickets en su Sistema de Tickets (No lo hagas, enserio, se lo que te digo).
+    links:
+      - title: Administrar encuestas por correo electrónico</span> &amp; Configuración de <span class="doc-desc-title">AutoCron</span>.
+        href: /scp/settings.php?t=emails
+
+host_and_port:
+    title: Host Remoto
+    content: >
+        Introduzca el nombre de <span class="doc-desc-title">host </span> y el número de <span class="doc-desc-title">puerto </span> 
+        de su servidor de correo. Esto puede estar disponible en la documentación de su cuenta de alojamiento o de su 
+        administrador de correo electrónico.
+        <br/><br/>
+        Si usa un número de <span class="doc-desc-title">puerto</span> no estándar con el <span class="doc-desc-title">cifrado habilitado</span>, prefije 
+        el nombre de host con el esquema ssl:// o tls:// para indicar el cifrado admitido.
+        <br/><br/>        
+        Para forzar una conexión simple incluso cuando se usa un <span class="doc-desc-title">puerto</span> de cifrado estándar, use el esquema simple://.
+
+mailbox_folder:
+    title: Carpeta de correo
+    content: >
+        Ingrese el nombre de la <span class="doc-desc-title">Carpeta</span> de la que desea obtener 
+        el correo. Si se deja vacío, el sistema buscará desde la INBOX.
+
+protocol:
+    title: Protocolo de buzón de correo
+    content: >
+        Seleccione el protocolo de casilla de correo compatible con su servidor de correo remoto.
+        Configure el IMAP en un puerto seguro.
+
+authentication:
+    title: Autenticación
+    content: >
+        Se requiere el complemento de<span class="doc-desc-title"> SYSTPIP OAuth2 </span> 
+        para la compatibilidad con la autenticación del API GMAIL.
+    links:
+      - title: Descarga los plugins
+        href: https://drive.google.com/drive/folders/1OjqGfUfEI0qlB5bXRCzXmRnG5KeHjbJF?usp=share_link
+
+fetch_frequency:
+    title: Frecuencia de búsqueda
+    content: >
+        Ingrese con qué frecuencia, en minutos, el sistema sondeará el buzón.
+        <br/><br/>
+        Esto definirá la demora promedio en recibir una respuesta automática después de 
+        que un usuario envíe un correo electrónico a este buzón.
+
+emails_per_fetch:
+    title: Correos electrónicos por recuperación
+    content: >
+        Ingrese el número de correos electrónicos procesados a la vez.
+
+fetched_emails:
+    title: Correos electrónicos obtenidos
+    content: >
+        Decida qué hacer con los correos electrónicos procesados::
+        <br/><br/>
+        <span class="doc-desc-opt"><b>Mover a la carpeta</b></span>:
+        Esto hará una copia de seguridad de su correo electrónico desde la bandeja de entrada a una 
+        carpeta que especifique. Si la carpeta aún no existe en el servidor, el sistema 
+        intentará crearla automáticamente.
+        (<b>Recomendado</b>)
+        <hr>
+        <span class="doc-desc-opt"><b>Eliminar correos electrónicos</b></span>: 
+        Esto eliminará su correo electrónico de INBOX una vez que se procese.
+        <hr>
+        <span class="doc-desc-opt"><b>Hacer nada</b></span>: Esto dejará correos electrónicos en su 
+        INBOX. El sistema registrará los identificadores de mensaje de su correo electrónico 
+        e intentará no recuperarlo. Sin embargo, esta opción puede causar que se creen 
+        tickets duplicados.
+        (<em>No Recomendado</em>)
+
+smtp_settings:
+    title: Configuración SMTP
+    content: >
+        El correo electrónico enviado desde el Sistema de Tickets se puede enviar a través de un servidor SMTP. 
+        Esto se recomienda, si es posible, ya que aumentará la probabilidad de entrega de correo electrónico y hará 
+        que sea menos probable que los correos electrónicos se marquen como correo no deseado.
+
+header_spoofing:
+    title: Permitir suplantación de identidad de encabezado
+    content: >
+        Habilite esto para permitir el envío de correos electrónicos a través de este buzón de correo desde una dirección 
+        diferente a la proporcionada en la configuración anterior de <span class="doc-desc-title">Dirección de correo electrónico</span>.
+        <br/><br/> Esta configuración avanzada generalmente se usa cuando se envía correo desde los 
+        alias de este buzón.
+
+strict_matching:
+    title: Coincidencia de correo electrónico estricta
+    content: >
+        <b>Habilite</b> esta opción para solicitar que coincidan la dirección de correo electrónico y el propietario del recurso del token. 
+        Esto es útil para evitar la autorización accidental de una cuenta completamente diferente.<br><br> <b>Desactive</b> 
+        esta opción para permitir un propietario de recurso diferente para el token que la dirección de correo 
+        electrónico. Esto es útil para buzones de correo compartidos/alias/etc. donde necesita usar una cuenta de 
+        servicio o un administrador global para autorizar en nombre del correo electrónico.

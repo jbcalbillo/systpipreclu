@@ -1,0 +1,30 @@
+#
+# Email template: transfer.alert.yaml
+#
+# Sent to staff members when a ticket is assigned to them. Tickets can be
+# assigned automatically by the system or manually by another staff member.
+# Use %{assigner} to distinguish who made the assignment.
+#
+---
+notes: |
+    Se envía a los agentes cuando se transfiere un ticket a un departamento del que son miembros.
+subject: |
+    El Ticket #%{ticket.number} ha sido transferido al departamento - %{ticket.dept.name}
+body: |
+    <h3>Hola %{recipient.name},</h3>
+    El Ticket <a href="%{ticket.staff_link}">#%{ticket.number}</a> ha sido transferido al departamento
+    %{ticket.dept.name} por <strong>%{staff.name.short}</strong>
+    <br>
+    <br>
+    <blockquote>
+        %{comments}
+    </blockquote>
+    <hr>
+    <div>Para ver o responder al ticket, por favor <a
+    href="%{ticket.staff_link}">inicie sesión</a> al Sistema de Tickets PIP.
+    </div>
+    <em style="font-size: small; ">Soporte PIP</em>
+    <br>
+    <a href="https://www.instagram.com/elbacardios/"><img width="126" height="19"
+        alt="Powered By PIP-Reclu" style="width: 126px;"
+        src="cid:b56944cb4722cc5cda9d1e23a3ea7fbc"/></a>

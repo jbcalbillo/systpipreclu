@@ -1,0 +1,50 @@
+#
+# Email template: ticket.alert.yaml
+#
+# Sent to a staff member when a new ticket is created in the system. This
+# applies to tickets created via email, the web portal, or the api.
+#
+---
+notes: |
+    Enviado a un miembro del STAFF cuando se crea un nuevo ticket en el sistema. Esto se aplica a los tickets creados 
+    por correo electrónico, el portal web o la API.
+
+subject: |
+    Alerta de Ticket nuevo
+body: |
+    <h2>Hola %{recipient.name},</h2>
+    Nuevo Ticket #%{ticket.number} creado
+    <br>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+        <td>
+            <strong>De</strong>:
+        </td>
+        <td>
+            %{ticket.name} &lt;%{ticket.email}&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Departmento asignado</strong>:
+        </td>
+        <td>
+            %{ticket.dept.name}
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    %{message}
+    <br>
+    <br>
+    <hr>
+    <div>Para ver o responder al ticket, por favor <a
+    href="%{ticket.staff_link}">inicia sesión</a> al Sistema de Tickets PIP</div>
+    <em style="font-size: small">Soporte PIP</em>
+    <br>
+    <a href="https://sites.google.com/it-strategy.mx/pip/inicio"><img width="126" height="19"
+        style="width: 126px; " alt="Powered By PIP-Reclu"
+        src="https://drive.google.com/file/d/1kWfzFfFZlENtpaV__fb9egAkLdXpHeh5/view?usp=share_link"/></a>

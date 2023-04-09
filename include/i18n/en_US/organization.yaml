@@ -1,0 +1,17 @@
+#
+# Initial organizations defined for the system.
+#
+# Fields:
+# name - Descriptive name for the organization
+# fields - custom fields
+#
+---
+- name: Triple I
+  fields:
+    address:|
+        Colina de Mocusari 33Boulevares, 53140 
+        Naucalpan de Juárez, Méx.
+    phone: ( 55 ) 5308 0231
+    website: https://www.triplei.mx/
+    notes: >
+        

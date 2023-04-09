@@ -1,0 +1,27 @@
+#
+# registration-staff.yaml
+#
+# Confirmation email sent to clients when accounts are created for them by
+# staff or via the client portal. This email serves as an email address
+# verification.
+#
+---
+notes: >
+    Esta plantilla define el correo electrónico enviado a los Clientes cuando su cuenta ha sido creada en el Portal del Cliente 
+    o por un Agente a su nombre. Este correo electrónico sirve como verificación de dirección de correo electrónico. 
+    Utilice %{link} en alguna parte del cuerpo.
+name: "Bienvenido asl Sistema de Tickets PIP de %{company.name}"
+body: >
+    <h3><strong>Hola %{recipient.name.first},</strong></h3>
+    <div>
+    Hemos creado una cuenta para usted en nuestro Sistema de Tickets en %{url}.<br />
+    <br />
+    Siga el enlace a continuación para confirmar su cuenta y obtener acceso a 
+    sus tickets.<br />
+    <br />
+    <a href="%{link}">%{link}</a><br />
+    <br />
+    <em style="font-size: small">Soporte PIP
+    <br />
+    </em>
+    </div>

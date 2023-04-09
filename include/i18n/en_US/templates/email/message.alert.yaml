@@ -1,0 +1,52 @@
+#
+# Email template: message.alert.yaml
+#
+# Sent to staff members when a new message is posted by a user to a ticket.
+# This can occur if the users responds to an email from the system or visits
+# the customer web portal and posts a new message there.
+#
+---
+otes: |
+    Se envía a los miembros del personal cuando un usuario publica un nuevo mensaje en un ticket. 
+    Esto puede ocurrir si los usuarios responden a un correo electrónico del sistema o visitan el portal web 
+    del cliente y publican un nuevo mensaje allí.
+
+subject: |
+    Alerta de mensaje nuevo
+body: |
+    <h3><strong>Hola %{recipient.name},</strong></h3>
+    Nuevo mensaje adjunto al ticket <a
+    href="%{ticket.staff_link}">#%{ticket.number}</a>
+    <br>
+    <br>
+    <table>
+    <tbody>
+    <tr>
+        <td>
+             <strong>De</strong>:
+        </td>
+        <td>
+             %{poster.name} &lt;%{ticket.email}&gt;
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <strong>Departamento</strong>:
+        </td>
+        <td>
+             %{ticket.dept.name}
+        </td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    %{message}
+    <br>
+    <br>
+    <hr>
+    <div>Para ver o responder al ticket, por favor <a
+    href="%{ticket.staff_link}"><span style="color: rgb(84, 141, 212);"
+    >inicie sesión</span></a> en el Sistema de Tickets PIP</div>
+    <em style="color: rgb(127,127,127); font-size: small; ">Soporte PIP</em><br>
+    <img src="cid:b56944cb4722cc5cda9d1e23a3ea7fbc"
+    alt="Powered by PIP-Reclu" width="126" height="19" style="width: 126px;">

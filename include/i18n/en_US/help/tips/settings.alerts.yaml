@@ -1,0 +1,84 @@
+#
+# This is popup help messages for the Account Panel ->
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+page_title:
+    title: Alertas y Notificaciones
+    content: >
+        Las alertas y los avisos son notificaciones automáticas por correo electrónico que se 
+        envían a los agentes cuando se activan varios eventos de tickets.
+
+ticket_alert:
+    title: Alerta de nuevo ticket
+    content: >
+        <p>Alerta enviada a los agentes cuando se crea un nuevo ticket.</p><p class="info-banner"><i class="icon-info-sign">
+        </i>Esta alerta no se envía averiguar, si el ticket se asigna automáticamente a través de un filtro de tickets o un tema de ayuda.</p>
+    links:
+      - title: Plantilla predeterminada de alerta de nuevo ticket
+        href: /scp/templates.php?default_for=ticket.alert
+
+message_alert:
+    title: Alerta de mensaje nuevo
+    content: >
+        Alerta enviada a los agentes cuando se agrega un nuevo mensaje del usuario a un ticket existente.
+    links:
+      - title: Plantilla de alerta de mensaje nuevo predeterminada
+        href: /scp/templates.php?default_for=message.alert
+
+internal_note_alert:
+    title: Nueva alerta de actividad interna
+    content: >
+        Alerta enviada a los agentes cuando se agrega a un ticket actividad interna, como una nota interna o una respuesta del agente.
+    links:
+      - title: Plantilla de actividad de ticket predeterminada
+        href: /scp/templates.php?default_for=note.alert
+
+assignment_alert:
+    title: Alerta de asignación de tickets
+    content: >
+        Alerta enviada a los agentes en la asignación de tickets.
+    links:
+      - title: Plantilla de alerta de asignación de ticket predeterminada
+        href: /scp/templates.php?default_for=assigned.alert
+
+transfer_alert:
+    title: Alerta de transferencia de tickets
+    content: >
+        Alerta enviada a Agentes sobre transferencia de tickets entre Departamentos.
+    links:
+      - title: Plantilla de alerta de transferencia de boleto predeterminada
+        href: /scp/templates.php?default_for=transfer.alert
+
+overdue_alert:
+    title: Alerta de ticket vencido
+    content: >
+        Alerta enviada a los agentes cuando un ticket vence según el SLA o la fecha de vencimiento.
+    links:
+      - title: Plantilla de alerta de ticket obsoleto predeterminada
+        href: /scp/templates.php?default_for=ticket.overdue
+
+      - title: Administrar SLAs
+        href: /scp/slas.php
+
+system_alerts:
+    title: Alertas del sistema
+    content: >
+        Eventos importantes del sistema que se envían al administrador (%{config.admin_email}). Según el <span class="doc-desc-title">Nivel de registro</span> 
+        configurado, los eventos también están disponibles en los <span class="doc-desc-title">Registros del sistema</span>
+    links:
+      - title: Ver registros del sistema
+        href: /scp/logs.php
+
+      - title: Cambiar el correo electrónico del administrador
+        href: /scp/settings.php?t=emails

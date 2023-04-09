@@ -1,0 +1,69 @@
+#
+# This is popup help messages for the Account Panel ->
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+company_information:
+    title: Información de la empresa
+    content: >
+        Esto se refiere a la empresa u organización que se beneficiará del software de SYSTPIP y su personal de 
+        soporte. La información aquí aparecerá en las firmas de correo electrónico (es decir, el pie de página) 
+        cuando los agentes respondan a los tickets.
+    links:
+      - title: Formulario de información de la empresa
+        href: /scp/forms.php?type=C
+
+landing_page:
+    title: Página de destino
+    content: >
+        La <span class="doc-desc-title">Página de destino</span> se muestra en la página principal de su sitio de soporte.
+
+offline_page:
+    title: Página sin conexión
+    content: >
+        La <span class="doc-desc-title">Página sin conexión</span> se muestra en el sitio del Sistema de Tickets cuando 
+        está sin conexión, consulte Panel de administración -&gt; Configuración -&gt; Sistema -&gt; Estado del HelpDesk.
+
+default_thank_you_page:
+    title: Página de agradecimiento predeterminada
+    content: >
+        La <span class="doc-desc-title">página de agradecimiento</span> se muestra al cliente cuando un <span class="doc-desc-title">Cliente</span> 
+        envía un nuevo ticket. <br/><br/><span class="doc-desc-title">Las páginas de agradecimiento</span> se pueden asociar con 
+        temas de ayuda.
+
+logos:
+    title: Logos
+    content: >
+        Puede personalizar el <span class="doc-desc-title">Logotipo</span> que se mostrará al Cliente en el Portal del cliente 
+        (es decir, su Sistema de Tickets).
+
+upload_a_new_logo:
+    title: Subir un nuevo logotipo
+    content: >
+        Elija una imagen en los formatos .gif, .jpg o .png. Redimensionaremos proporcionalmente la visualización de su imagen. 
+        Sin embargo, no cambiaremos el tamaño de los datos de la imagen. Por lo tanto, para acelerar los tiempos de carga, se 
+        recomienda que mantenga su imagen cerca del tamaño de imagen predeterminado (817 px &times; 170 px).
+
+backdrops:
+    title: Fondos
+    content: >
+        Puede personalizar el <span class="doc-desc-title">Fondo</span> que se mostrará en la página de 
+        inicio de sesión del personal.
+
+upload_a_new_backdrop:
+    title: Subir un nuevo fondo
+    content: >
+        Elija una imagen en los formatos .gif, .jpg o .png. Redimensionaremos proporcionalmente la visualización de su imagen. 
+        Sin embargo, no cambiaremos el tamaño de los datos de la imagen. Por lo tanto, para acelerar los tiempos de carga, se recomienda
+        que mantenga su imagen relativamente pequeña (menos de un megabyte). Tenga en cuenta también que se aplican las configuraciones
+        de carga máxima de PHP.

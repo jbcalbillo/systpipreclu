@@ -1,0 +1,27 @@
+#
+# pwreset-client.yaml
+#
+# Template of the email sent to clients when using the Forgot My Password
+# link on the login page
+---
+notes: >
+    Esta plantilla define el correo electrónico enviado a los clientes que seleccionan el enlace <strong>Olvidé mi contraseña</strong> 
+    en la página de inicio de sesión del cliente.
+name: "Acceso al Sistema de Tickets PIP de %{company.name}"
+body: >
+    <h3><strong>Hola %{user.name.first},</strong></h3>
+    <div>
+    Se ha enviado una solicitud de restablecimiento de contraseña a tu nombre para el 
+    Sistema de Tickets PIP  %{url}.<br />
+    <br />
+    Si cree que esto se ha hecho por error, elimine e ignore este correo electrónico. Su cuenta sigue siendo segura y nadie ha tenido 
+    acceso a ella. No está bloqueado y su contraseña no se ha restablecido. Alguien podría haber ingresado por error su dirección 
+    de correo electrónico.<br />
+    <br />
+    Siga el enlace a continuación para iniciar sesión en la mesa de ayuda y 
+    cambiar su contraseña.<br />
+    <br />
+    <a href="%{link}">%{link}</a><br />
+    <br />
+    Soporte PIP 
+        </div>

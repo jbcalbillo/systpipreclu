@@ -1,0 +1,46 @@
+#
+# This is popup help messages for the Admin Panel -> Settings -> Knowledgebase
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+knowledge_base_settings:
+    title: Configuración de la base de conocimientos
+    content: >
+
+knowledge_base_status:
+    title: Estado de la base de conocimientos
+    content: >
+        Habilite esta configuración para permitir a sus usuarios el acceso de autoservicio a sus artículos de la base de conocimiento 
+        pública. <br><br> Las categorías de la base de conocimientos y las preguntas frecuentes se pueden convertir 
+        en internas (solo visibles para los agentes).
+    links:
+      - title: Administrar la base de conocimientos
+        href: /scp/kb.php
+
+restrict_kb:
+    title: Restringir el acceso a la base de conocimientos
+    content: >
+        Habilite esta configuración para evitar que los usuarios no registrados accedan a los artículos de su base de conocimientos 
+        en la interfaz del cliente.
+    links:
+      - title: Configuración de control de acceso
+        href: /scp/settings.php?t=users
+
+canned_responses:
+    title: Respuestas almacenadas
+    content: >
+        Habilite esta configuración para permitir que los agentes usen <span class="doc-desc-title">Respuestas almacenadas</span> 
+        al responder a los tickets.
+    links:
+      - title: Administrar respuestas almacenadas
+        href: /scp/canned.php

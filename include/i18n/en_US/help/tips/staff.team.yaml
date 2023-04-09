@@ -1,0 +1,52 @@
+#
+# This is popup help messages for the Admin Panel -> Staff -> Teams
+#
+# Fields:
+# title - Shown in bold at the top of the popover window
+# content - The body of the help popover
+# links - List of links shows below the content
+#   title - Link title
+#   href - href of link (links starting with / are translated to the
+#       helpdesk installation path)
+#
+# The key names such as 'helpdesk_name' should not be translated as they
+# must match the HTML #ids put into the page template.
+#
+---
+teams:
+    title: Equipos
+    content: >
+        Los equipos son uno o más Agentes unidos con el fin de asignar tickets.
+
+status:
+    title: Estado
+    content: >
+        Si está deshabilitado, este equipo no estará disponible para asignaciones de 
+        tickets ni recibirá Alertas &amp; Notificaciones sobre asignaciones anteriores.
+
+lead:
+    title: Jefe de equipo
+    content: >
+        Un <span class="doc-desc-title">Equipo</span> puede tener 
+        un líder que puede recibir <span class="doc-desc-title">Alertas &amp; Notificaciones</span>
+        separados de los miembros.
+    links:
+      - title: Configurar Alertas &amp; Notificaciones
+        href: /scp/settings.php?t=alerts
+
+assignment_alert:
+    title: Alerta de asignación
+    content: >
+        Puede deshabilitar la <span class="doc-desc-title">Alerta de asignación de tickets</span>
+        para los tickets asignados a este equipo.
+    links:
+      - title: Configurar Alertas &amp; Notificaciones
+        href: /scp/settings.php?t=alerts
+
+members:
+    title: Miembros del equipo
+    content: >
+        La pertenencia al equipo se configura a través del perfil del agente.
+    links:
+      - title: Administrar personal
+        href: /scp/staff.php
